@@ -1,0 +1,17 @@
+course_id: STC-P2-COMPUTE
+title: Secure Compute Foundations
+phase: Phase 2
+difficulty: Intermediate
+clouds:
+  - aws
+domains:
+  - compute
+  - networking
+  - zero_trust
+security_principles:
+  - default_deny
+  - blast_radius_reduction
+  - identity_first
+academy:
+  status: active
+  ordering: enforced
