@@ -94,85 +94,78 @@ From your private EC2 instance (via SSM):
 
 ```
 curl https://example.com
+---
 Optional:
+---
 
 sudo yum update -y
+
+---
+
 📌 ICMP (ping) may be blocked — this is expected.
+---
 
 Step 4 — Analyze Flow Logs
 Navigate to:
 CloudWatch → Logs → Log groups → /stc/p2/vpc-flowlogs
 
 You will see entries similar to:
-
+---
 ACCEPT OK
 REJECT NODATA
-Key fields to observe:
-
-Source IP
-
-Destination IP
-
-Port
-
-Action (ACCEPT / REJECT)
-
-Direction
 ---
-🔍 Interpreting Flow Logs (Security View)
-ACCEPT
-Traffic allowed by SG + NACL + routing
 
-Expected outbound NAT traffic
+**Key fields to observe:**
+- Source IP
+- Destination IP
+- Port
+- Action (ACCEPT / REJECT)
+- Direction
 
-Controlled internal communication
-
-REJECT
-Blocked inbound attempts
-
-Misconfigured routing
-
-Security Group enforcement
-
-📌 Rejected traffic is often more valuable than accepted traffic.
 ---
-🔐 Security Design Principles Applied
+
+## 🔍 Interpreting Flow Logs (Security View)
+
+**ACCEPT**
+- Traffic allowed by SG + NACL + routing
+- Expected outbound NAT traffic
+- Controlled internal communication
+
+**REJECT**
+- Blocked inbound attempts
+- Misconfigured routing
+- Security Group enforcement
+
+> 📌 **Rejected traffic is often more valuable than accepted traffic.**
+
+---
+
+## 🔐 Security Design Principles Applied
 This lab enforces:
+- Visibility before response
+- Telemetry-driven security
+- Verification of routing intent
+- Evidence-based security decisions
 
-Visibility before response
-
-Telemetry-driven security
-
-Verification of routing intent
-
-Evidence-based security decisions
 ---
-✅ Validation Checklist
+
+## ✅ Validation Checklist
 Confirm all of the following:
+- [ ] Flow logs enabled on the VPC
+- [ ] Logs delivered to CloudWatch
+- [ ] Both ACCEPT and REJECT events visible
+- [ ] Traffic aligns with expected architecture
+- [ ] No unexpected inbound flows observed
 
- Flow logs enabled on the VPC
+> **If traffic surprises you — investigate. That's the point.**
 
- Logs delivered to CloudWatch
-
- Both ACCEPT and REJECT events visible
-
- Traffic aligns with expected architecture
-
- No unexpected inbound flows observed
-
-If traffic surprises you — investigate. That’s the point.
----
 ---
 
-🧠 What You Just Built (Phase 2 Summary)
+## 🧠 What You Just Built (Phase 2 Summary)
 Across Phase 2, you built:
+- A tiered VPC architecture
+- Default-deny private compute
+- Identity-native access (Zero Trust ready)
+- Network telemetry for security visibility
 
-A tiered VPC architecture
-
-Default-deny private compute
-
-Identity-native access (Zero Trust ready)
-
-Network telemetry for security visibility
-
-This is a production-grade secure compute foundation.
+**This is a production-grade secure compute foundation.**
