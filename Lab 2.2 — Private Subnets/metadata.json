@@ -1,0 +1,34 @@
+{
+  "stc_type": "lab",
+  "lab_id": "P2-LAB-02",
+  "title": "Private Subnets and Default-Deny Compute",
+  "phase": "Phase 2 — Secure Compute Foundations",
+  "domain": "compute",
+  "subdomains": ["subnets", "egress-control"],
+  "cloud": ["aws"],
+  "difficulty": "Intermediate",
+  "estimated_time": "30–45 minutes",
+  "learning_objectives": [
+    "Deploy compute without public IPs",
+    "Control outbound access securely",
+    "Prepare workloads for Zero Trust access"
+  ],
+  "prerequisites": [
+    "Secure VPC Layout (Lab 2.1)"
+  ],
+  "security_principles": [
+    "No direct internet exposure",
+    "Egress minimization",
+    "Identity before network access"
+  ],
+  "evidence": {
+    "labs": true,
+    "diagrams": true,
+    "deployments": true
+  },
+  "academy": {
+    "order": 2,
+    "track": "Secure Compute Foundations",
+    "status": "ready"
+  }
+}
