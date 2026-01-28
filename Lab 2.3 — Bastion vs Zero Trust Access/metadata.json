@@ -1,0 +1,35 @@
+{
+  "stc_type": "lab",
+  "lab_id": "P2-LAB-03",
+  "title": "Bastion Hosts vs Zero Trust Access Models",
+  "phase": "Phase 2 — Secure Compute Foundations",
+  "domain": "zero_trust",
+  "subdomains": ["access", "identity-aware-proxy"],
+  "cloud": ["aws"],
+  "difficulty": "Advanced",
+  "estimated_time": "45 minutes",
+  "learning_objectives": [
+    "Understand the limitations of bastion hosts",
+    "Model identity-based access to compute",
+    "Prepare for Zero Trust enforcement"
+  ],
+  "prerequisites": [
+    "AWS IAM Identity Center",
+    "Private Subnets (Lab 2.2)"
+  ],
+  "security_principles": [
+    "Never trust, always verify",
+    "Credential-less access",
+    "Continuous validation"
+  ],
+  "evidence": {
+    "labs": true,
+    "diagrams": true,
+    "deployments": false
+  },
+  "academy": {
+    "order": 3,
+    "track": "Secure Compute Foundations",
+    "status": "ready"
+  }
+}
