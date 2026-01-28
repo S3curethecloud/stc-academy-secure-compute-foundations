@@ -1,0 +1,34 @@
+{
+  "stc_type": "lab",
+  "lab_id": "P2-LAB-04",
+  "title": "VPC Flow Logs as Security Telemetry",
+  "phase": "Phase 2 — Secure Compute Foundations",
+  "domain": "siem",
+  "subdomains": ["network-telemetry", "visibility"],
+  "cloud": ["aws"],
+  "difficulty": "Intermediate",
+  "estimated_time": "30–40 minutes",
+  "learning_objectives": [
+    "Enable and analyze VPC Flow Logs",
+    "Distinguish allowed vs rejected traffic",
+    "Use network telemetry for threat detection"
+  ],
+  "prerequisites": [
+    "Secure VPC Layout (Lab 2.1)"
+  ],
+  "security_principles": [
+    "Visibility enables security",
+    "Detect before respond",
+    "Telemetry-driven defense"
+  ],
+  "evidence": {
+    "labs": true,
+    "diagrams": false,
+    "deployments": false
+  },
+  "academy": {
+    "order": 4,
+    "track": "Secure Compute Foundations",
+    "status": "ready"
+  }
+}
